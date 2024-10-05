@@ -3,7 +3,6 @@ import React from 'react'
 import { View, Text, Image, Dimensions, TouchableOpacity } from 'react-native'
 import { FontAwesome6, MaterialCommunityIcons, SimpleLineIcons, Feather, MaterialIcons } from 'react-native-vector-icons';
 
-
 const width = Dimensions.get('screen').width;
 const height = Dimensions.get('screen').height;
 
@@ -11,7 +10,7 @@ export default function ProfileScreen() {
     return (
         <View style={{ padding: 20, backgroundColor: '#26282C', width: width, height: height, marginTop: 20 }}>
             <StatusBar style="dark" />
-            
+
             <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                 <Text style={{ fontWeight: 'bold', fontSize: 22, color: 'white', padding: 10 }}>More</Text>
             </View>
@@ -22,9 +21,9 @@ export default function ProfileScreen() {
                     <Text style={{ fontSize: 20, fontWeight: 'bold', color: 'white' }}>Aimee mecrury</Text>
                     <Text style={{ fontSize: 15, fontWeight: '400', color: 'white' }}>Frontend $ Mobile app developer</Text>
                 </View>
-                <Feather name="edit" size={20} color="yellow" style={{ marginTop: 20, marginLeft: 90 }} />
+
             </View>
-            
+
 
             <View style={{ padding: 10, marginTop: 20 }}>
                 <Text style={{ fontSize: 16, fontWeight: '300', color: 'white' }}>General Settings</Text>
@@ -82,18 +81,16 @@ export default function ProfileScreen() {
                         <Text style={{ fontSize: 18, fontWeight: '400', color: 'white' }}>Privacy&Policy</Text>
                         <SimpleLineIcons name="arrow-right" size={16} color="white" />
                     </View>
-               
-        <TouchableOpacity
-         onPress={()=>navigation.navigate('SignUp')}
-          style={{ color: '#E2886F', borderWidth: 3, borderColor: '#41464A' }}>
-          <Text style={{ color: '#C36F60', textAlign: 'center', padding: 7 }}>
-            Log Out
-          </Text>
-        </TouchableOpacity>
-      
+
+                    <TouchableOpacity
+                        onPress={() => navigation.navigate('SignUp')}
+                        style={{ color: '#E2886F', borderWidth: 3, borderColor: '#41464A' }}>
+                        <Text style={{ color: '#C36F60', textAlign: 'center', padding: 7 }}>
+                            Log Out
+                        </Text>
+                    </TouchableOpacity>
 
                 </View>
-
             </View>
 
         </View>

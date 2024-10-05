@@ -41,14 +41,19 @@ export default function Action({ route, navigation }) {
       Handleplay();
     }, []);
   
-    const Handleplay =()=>{
-      fetch(`https://api.themoviedb.org/3/movie/${rout.id}/videos?language=en-US`, options)
-    .then(response => response.json())
-    .then((response) => {
-      setVideoPlay(response.results[0].key)
-    })
-    .catch(err => console.error(err));
-    }
+    const Handleplay =()=> {
+        fetch(`https://api.themoviedb.org/3/movie/${rout.id}/videos?language=en-US`, options)
+        .then(response => response.json())
+        .then(response => {
+            if (response.results && response.results.length > 0) {
+                setVideoPlay(response.results[0].key); // Ensure the response has results
+            } else {
+                console.log('No video found for this movie');
+            }
+        })
+        .catch(err => console.error(err));
+     }
+     
 
     fetch(`https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1`, options)
         .then(response => response.json())
@@ -75,8 +80,7 @@ export default function Action({ route, navigation }) {
                     <Text style={{ color: 'white', fontSize: 25, fontWeight: 'bold', marginTop: 30 }}>Action</Text>
                 </View>
                 <View style={{ paddingHorizontal: 20, paddingTop: 10, height: 350, backgroundColor: 'transparent',}}>
-                    {/* <Image source={{ uri: `https://image.tmdb.org/t/p/w500${route.poster_path}` }} */}
-                    {/* style={{ width: 330, height: 200 }}  */}
+
                     <YoutubeIframe
                         height={'60%'}
                         // width={300}

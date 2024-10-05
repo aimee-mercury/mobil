@@ -24,11 +24,11 @@ export default function WatchMovie({ navigation }) {
                 <Buttons text="Watch Movie" />
             </TouchableOpacity>
 
-            <TouchableOpacity onPress={() =>
+            {/* <TouchableOpacity onPress={() =>
                 navigation.navigate('Sign-In')
             }>
                 <Text style={{ color: 'white', alignSelf: 'center', fontSize: 15, fontWeight: 'bold', marginTop: 20 }}>Sign In</Text>
-            </TouchableOpacity>
+            </TouchableOpacity> */}
 
 
         </View>

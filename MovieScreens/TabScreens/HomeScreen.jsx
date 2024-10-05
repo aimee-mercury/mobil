@@ -10,7 +10,7 @@ import Navigation from '../Navigation';
 const width = Dimensions.get('screen').width
 const height = Dimensions.get('screen').height
 
-export default function HomeScreen({navigation}) {
+export default function HomeScreen({ navigation }) {
 
     const options = {
         method: 'GET',
@@ -32,11 +32,7 @@ export default function HomeScreen({navigation}) {
         .catch(err => console.error(err));
     const [movies, setMovie2] = useState([])
 
-    fetch('https://api.themoviedb.org/3/movie/popular?language=en-US&page=1', options)
-        .then(response => response.json())
-        .then(response => setMuvi(response.results))
-        .catch(err => console.error(err));
-    const [muvi, setMuvi] = useState([])
+
 
 
     return (
@@ -99,10 +95,10 @@ export default function HomeScreen({navigation}) {
                     renderItem={post => {
                         const item = post.item
                         return (
-                            <Movies text={item.vote_average} image={item.poster_path} onpress={()=>navigation.navigate('Action', item)} />
+                            <Movies text={item.vote_average} image={item.poster_path} onpress={() => navigation.navigate('Action', item)} />
                         )
                     }}
-                   
+
                 />
 
 
@@ -123,36 +119,15 @@ export default function HomeScreen({navigation}) {
                     renderItem={post => {
                         const item = post.item
                         return (
-                            <Movies text={item.vote_average} image={item.poster_path} onpress={()=>navigation.navigate('Action', item)} />
+                            <Movies text={item.vote_average} image={item.poster_path} onpress={() => navigation.navigate('Action', item)} />
                         )
                     }}
-                    
+
                 />
 
-                <View style={{ paddingTop: 20, display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
-                    <View style={{ flexDirection: 'row', gap: 3 }}>
-                        <Text style={{ color: 'white', fontWeight: 'bold', fontSize: 25 }}>Popular on</Text>
-                        <Text style={{ color: '#F1B91C', fontWeight: 'bold', fontSize: 25 }}>Muvi</Text>
-                    </View>
-                    <Text style={{ color: '#5F6064', padding: 10 }}>View More</Text>
-                </View>
 
-                <FlatList
-                    data={muvi}
-                    keyExtractor={item => {
-                        return item.id
-                    }}
-                    ItemSeparatorComponent={() => {
-                        return <View style={{ marginTop: 15 }} />
-                    }}
-                    renderItem={post => {
-                        const item = post.item
-                        return (
-                            <Pages text={item.vote_average} image={item.poster_path} onpress={()=>navigation.navigate('Action', item)} />
-                        )
-                    }}
-                    scrollEnabled={false}
-                />
+
+
             </ScrollView>
         </View>
     )

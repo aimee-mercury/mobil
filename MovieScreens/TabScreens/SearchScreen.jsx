@@ -45,7 +45,6 @@ export default function Search({navigation}) {
   };
 
 
-
 const [movie,setMovie]=useState([])
 
   useEffect(()=>{
@@ -89,7 +88,6 @@ fetch('https://api.themoviedb.org/3/movie/popular?language=en-US&page=1', option
       />
         <ScrollView>
  
-    
         </ScrollView>
     </SafeAreaView>
   );

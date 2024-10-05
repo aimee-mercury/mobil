@@ -5,8 +5,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import SplashScreen from './SplashScreen';
 import GetStarted from './GetStarted';
 import Welcome from './Welcome';
-import SignUp from './SignUp';
-import SignIn from './SignIn';
+// import SignUp from './SignUp';
+// import SignIn from './SignIn';
 import { Feather } from 'react-native-vector-icons';
 import HomeScreen from '../MovieScreens/TabScreens/HomeScreen';
 import ProfileScreen from '../MovieScreens/TabScreens/ProfileScreen';
@@ -61,8 +61,8 @@ export default function Navigation() {
         <Stack.Screen name="Here" component={GetStarted} options={{ headerShown: false }} />
         <Stack.Screen name="Watchmovie" component={WatchMovie} options={{ headerShown: false }} />
         <Stack.Screen name="Welcome" component={Welcome} options={{ headerShown: false }} />
-        <Stack.Screen name="Sign-Up" component={SignUp} options={{ headerShown: false }} />
-        <Stack.Screen name="Sign-In" component={SignIn} options={{ headerShown: false }} />
+        {/* <Stack.Screen name="Sign-Up" component={SignUp} options={{ headerShown: false }} />
+        <Stack.Screen name="Sign-In" component={SignIn} options={{ headerShown: false }} /> */}
         <Stack.Screen name="Action" component={Action} options={{ headerShown: false }} />
         <Stack.Screen name="home" component={HomeScreen} options={{ headerShown: false }} />
         <Stack.Screen name="Main" component={MyTabs} options={{ headerShown: false }} />

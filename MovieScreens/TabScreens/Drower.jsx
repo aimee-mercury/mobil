@@ -13,3 +13,4 @@ export function DrawerContent({ navigation }) {
     </View>
   );
 }
+
