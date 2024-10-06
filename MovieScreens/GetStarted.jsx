@@ -17,12 +17,33 @@ export default function GetStarted({ navigation }) {
                 <View style={{ 
                     backgroundColor: 'rgba(0, 0, 0, 0.5)', 
                     flex: 1, 
-                    justifyContent: 'center', 
-                    alignItems: 'center' 
+                    flexDirection: 'column-reverse', // Reverse column to push content down
+                    justifyContent: 'flex-start',
+                    alignItems: 'center',
+                    paddingBottom: 50 // Control bottom padding
                 }}>
+                    <TouchableOpacity 
+                        style={{ 
+                            backgroundColor: '#FDD130', 
+                            borderRadius: 5, // Rounded corners
+                            padding: 10, 
+                            width: '80%', // Wider button
+                            marginBottom: 30 // Ensure spacing from the bottom
+                        }}
+                        onPress={() => navigation.navigate('Watchmovie')}
+                    >
+                        <Text style={{ 
+                            color: 'black', 
+                            textAlign: 'center', 
+                            fontWeight: 'bold' // Bold text for button
+                        }}>
+                            Get Started
+                        </Text>
+                    </TouchableOpacity>
+
                     <View style={{ 
                         alignItems: 'center', 
-                        marginVertical: 50 // Adjust vertical margin as needed
+                        marginBottom: 30 // Space above the button
                     }}>
                         <Text style={{ 
                             color: 'white', 
@@ -50,25 +71,6 @@ export default function GetStarted({ navigation }) {
                             Browse through our collections and discover hundreds of movies and series that you will love
                         </Text>
                     </View>
-
-                    <TouchableOpacity 
-                        style={{ 
-                            marginTop: 40, // Adjusted for spacing
-                            backgroundColor: '#FDD130', 
-                            borderRadius: 5, // Rounded corners
-                            padding: 10, 
-                            width: '80%', // Wider button
-                        }}
-                        onPress={() => navigation.navigate('Watchmovie')}
-                    >
-                        <Text style={{ 
-                            color: 'black', 
-                            textAlign: 'center', 
-                            fontWeight: 'bold' // Bold text for button
-                        }}>
-                            Get Started
-                        </Text>
-                    </TouchableOpacity>
                 </View>
             </ImageBackground>
         </View>

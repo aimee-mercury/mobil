@@ -43,10 +43,10 @@ export default function HomeScreen({ navigation }) {
                 <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', marginTop: 30 }}>
                     <View style={{ flexDirection: 'row', gap: 2 }}>
                         <Text style={{ color: 'black', fontSize: 25, fontWeight: 'bold', backgroundColor: '#F1B91C', borderWidth: 1, borderColor: '#FDD32C', borderRadius: 6, textAlign: 'center', width: 35 }}>M</Text>
-                        <Text style={{ color: 'white', fontSize: 25, fontWeight: 'bold' }}>Muvi</Text>
+                        <Text style={{ color: 'white', fontSize: 25, fontWeight: 'bold' }}>A . Muvi</Text>
                     </View>
                     <View style={{ flexDirection: 'row', gap: 20 }}>
-                        <Ionicons name="bookmark-outline" size={20} color="white" />
+                       
                         <Ionicons name="notifications-outline" size={20} color="white" />
                     </View>
 
@@ -58,10 +58,9 @@ export default function HomeScreen({ navigation }) {
                                 <Text style={{ color: '#F1B91C', fontSize: 15, }}>Featured</Text>
                                 <View style={{ width: 30, height: 4, backgroundColor: '#F1B91C', borderRadius: 10, marginTop: 5, marginLeft: 10, padding: 2 }}></View>
                             </View>
-                            <Text style={{ color: 'white' }}>Series</Text>
                             <Text style={{ color: 'white' }}>Films</Text>
                             <Text style={{ color: 'white' }}>Origin</Text>
-                            <Text style={{ color: 'white' }}>Collections</Text>
+                           
                         </View>
                     </ScrollView>
                 </View>
@@ -70,9 +69,6 @@ export default function HomeScreen({ navigation }) {
                 <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{ marginTop: 20 }}>
                     <View style={{ flexDirection: 'row', gap: 15 }}>
                         <Button name="Popular Today" />
-                        <Button name="Marvel" />
-                        <Button name="Fans Choice" />
-                        <Button name="Stars Watch" />
                         <Button name="Favourites" />
                         <Button name="Your choice" />
                     </View>

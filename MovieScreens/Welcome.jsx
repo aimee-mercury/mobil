@@ -12,8 +12,8 @@ export default function Welcome({navigation}) {
     <View style={{ backgroundColor: '#26282C', width: width, height: height, }}>
       <View style={{height: 200, paddingTop: 30 }}>
       <View style={{ padding: 20, alignSelf: 'center', display: 'flex', flexDirection: 'row', gap: 3, }}>
-        <Text style={{ color: 'black', fontSize: 35, fontWeight: 'bold', backgroundColor: '#FDD32C', borderWidth: 1, borderColor: '#FDD32C', borderRadius: 10, textAlign: 'center', width: 40 }}>M</Text>
-        <Text style={{ color: 'white', fontSize: 35, fontWeight: 'bold' }}>Muvi</Text>
+        <Text style={{ color: 'black', fontSize: 35, fontWeight: 'bold', backgroundColor: '#FDD32C', borderWidth: 1, borderColor: '#FDD32C', borderRadius: 10, textAlign: 'center', width: 40 }}>A</Text>
+        <Text style={{ color: 'white', fontSize: 35, fontWeight: 'bold' }}>A . Muvi</Text>
       </View>
       </View>
 

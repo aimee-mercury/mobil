@@ -9,8 +9,8 @@ export default function WatchMovie({ navigation }) {
     return (
         <View style={{ backgroundColor: '#26282C', width: '100%', height: '100%', position: 'relative' }}>
             <View style={{ marginTop: 50, alignSelf: 'center', display: 'flex', flexDirection: 'row', gap: 1 }}>
-                <Text style={{ fontSize: 25, fontWeight: 'bold', backgroundColor: '#FDD32C', borderWidth: 1, borderColor: '#FDD32C', borderRadius: 10, width: 40, textAlign: 'center' }}>M</Text>
-                <Text style={{ fontSize: 25, color: 'white', }}>Muvi</Text>
+                <Text style={{ fontSize: 25, fontWeight: 'bold', backgroundColor: '#FDD32C', borderWidth: 1, borderColor: '#FDD32C', borderRadius: 10, width: 40, textAlign: 'center' }}>M </Text>
+                <Text style={{ fontSize: 25, color: 'white', }}>A . Muvi</Text>
             </View>
 
             <View style={{ top: 40 }}>
@@ -20,7 +20,7 @@ export default function WatchMovie({ navigation }) {
             <Text style={{ color: 'white', fontSize: 30, fontWeight: 'bold', textAlign: 'center', paddingTop: 70 }}>Welcome to Muvi</Text>
             <Text style={{ color: 'white', fontWeight: '300', textAlign: 'center' }}>Free movie streaming all your needs everytime and everywhere.</Text>
 
-            <TouchableOpacity onPress={() => navigation.navigate('Main')} style={{ marginTop: 140, alignSelf: 'center', borderRadius: 5, borderWidth: 1, width:370, backgroundColor: '#FDD32C' }}>
+            <TouchableOpacity onPress={() => navigation.navigate('Main')} style={{ marginTop: 140, alignSelf: 'center', borderRadius: 5, borderWidth: 1, width:370, borderWidth:1 }}>
                 <Buttons text="Watch Movie" />
             </TouchableOpacity>
 

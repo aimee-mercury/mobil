@@ -17,7 +17,7 @@ export default function Register({ navigation }) {
       <View style={{ backgroundColor: '#26282c', justifyContent: 'center', alignItems: 'center' }}>
         <View>
           <Text style={{ color: 'white', fontSize: 30 }}>
-            <Image source={require('../assets/logo.jpg')} /> MUVI
+            <Image source={require('../assets/logo.jpg')} /> A . MUVI
           </Text>
         </View>
         <Text style={{ color: 'white', marginTop: 20, fontSize: 15 }}>Sign up to discover all our movies and enjoy</Text>
